@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dipanshu.mycityapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +17,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MMT" />
+        <activity android:name=".GOIBIBO" />
+        <activity android:name=".IRCTC" />
+        <activity android:name=".REDBUS" />
+        <activity android:name=".flights" />
+        <activity android:name=".TRIVAGO" />
+        <activity android:name=".hotels" />
+        <activity android:name=".MENU" />
+        <activity android:name=".TRAVEL" />
+        <activity android:name=".OYO" />
     </application>
 
 </manifest>
