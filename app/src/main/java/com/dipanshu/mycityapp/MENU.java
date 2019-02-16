@@ -29,5 +29,30 @@ public class MENU extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        Button publicbtn=findViewById(R.id.publicr);
+        publicbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),publicr.class);
+                startActivity(i);
+            }
+        });
+
+        Button weatherbtn=findViewById(R.id.weather);
+        weatherbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),weather.class);
+                startActivity(i);
+            }
+        });
+        Button chatbtn=findViewById(R.id.chat);
+        chatbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),ScrollingActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

@@ -27,6 +27,12 @@
         <activity android:name=".MENU" />
         <activity android:name=".TRAVEL" />
         <activity android:name=".OYO" />
+        <activity android:name=".citydetails" />
+        <activity android:name=".publicr" />
+        <activity android:name=".weather" />
+        <activity android:name=".WritingActivity" />
+        <activity android:name=".Wall_activity" />
+        <activity android:name=".ScrollingActivity" />
     </application>
 
 </manifest>

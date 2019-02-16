@@ -9,43 +9,48 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TRAVEL"
+        android:text="Schools/Colleges"
         android:layout_gravity="center"
-        android:id="@+id/travel"/>
+        android:id="@+id/schools"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOTELS"
+        android:text="Emergency numbers"
         android:layout_gravity="center"
-        android:id="@+id/hotels"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Public services"
-        android:layout_gravity="center"
-        android:id="@+id/publicr"/>
+        android:id="@+id/emer"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="tourism"
+        android:text="Old age homes"
         android:layout_gravity="center"
-        android:id="@+id/tourism"/>
+        android:id="@+id/old"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="weather"
+        android:text="police stations"
         android:layout_gravity="center"
-        android:id="@+id/weather"/>
-
+        android:id="@+id/police"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chat-Support"
-        android:layout_gravity="end"
-        android:id="@+id/chat"/>
+        android:text="Hospitals"
+        android:layout_gravity="center"
+        android:id="@+id/hospitals"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Public Representatives"
+        android:layout_gravity="center"
+        android:id="@+id/rep"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="embassies"
+        android:layout_gravity="center"
+        android:id="@+id/emb"/>
 </LinearLayout>

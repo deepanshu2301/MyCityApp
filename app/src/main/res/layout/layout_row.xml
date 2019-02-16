@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10sp"
+    android:paddingLeft="10sp"
+    android:paddingRight="10sp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:text="City"
+        android:padding="10sp"
+        android:id="@+id/city1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <TextView
+            android:text="Message"
+            android:padding="10sp"
+            android:id="@+id/message1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#D3d3d3"
+        android:layout_marginBottom="4dp"
+        android:layout_height="1dp"/>
+
+
+
+</LinearLayout>

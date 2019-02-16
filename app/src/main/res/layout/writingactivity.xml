@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10sp"
+    android:scrollbars="none"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_height="10sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Feed"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:id="@+id/feed"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/cross"
+                android:textStyle="bold"
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent"
+                android:id="@+id/button1"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4sp"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                android:text="Submit"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#D3d3d3"
+            android:paddingRight="10sp"
+            android:paddingLeft="10sp"
+            android:layout_marginBottom="4dp"
+            android:layout_height="1sp"/>
+        <EditText
+            android:id="@+id/input_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="City"
+            android:background="@android:color/transparent"
+            android:minLines="1"
+            android:textSize="20sp"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="4"
+            android:textStyle="bold"
+            android:typeface="sans"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="#D3d3d3"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp"
+        android:layout_marginBottom="4dp"
+        android:layout_height="1sp"/>
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="..."
+            android:background="@android:color/transparent"
+            android:minLines="3"
+            android:textSize="20sp"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="4"
+            android:textStyle="bold"
+            android:typeface="sans"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#D3d3d3"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp"
+        android:layout_marginBottom="4dp"
+        android:layout_height="1dp"/>
+
+</LinearLayout>
+</ScrollView>

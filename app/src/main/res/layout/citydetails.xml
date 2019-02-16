@@ -4,24 +4,20 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter City name ?"
+        android:id="@+id/etcity"
+        android:layout_gravity="center"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
-
-        android:layout_gravity="center"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SIGN UP"
-        android:layout_gravity="center"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GUEST"
+        android:text="Fetch Details"
+        android:id="@+id/enter"
         android:layout_gravity="center"/>
 </LinearLayout>

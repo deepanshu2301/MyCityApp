@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "713186409775",
+    "firebase_url": "https://mycityapp-d5a62.firebaseio.com",
+    "project_id": "mycityapp-d5a62",
+    "storage_bucket": "mycityapp-d5a62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713186409775:android:b8937718909e7a7e",
+        "android_client_info": {
+          "package_name": "com.dipanshu.mycityapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713186409775-gfqb18jqpjh7kf5c23gn9h3cotm8l47s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dipanshu.mycityapp",
+            "certificate_hash": "e5b4c4ec9a8fc7d2cccf3dbf84ecad09f2aa868e"
+          }
+        },
+        {
+          "client_id": "713186409775-kuplrhlvua1n5o1sv1di2enccp3m2fhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVocvbpytSnMrSa_CaJzzZnAxaNaPTKvE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713186409775-kuplrhlvua1n5o1sv1di2enccp3m2fhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
