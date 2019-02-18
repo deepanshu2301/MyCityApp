@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.dipanshu.mycityapp.Weather_dir.MainActivity1;
+
 public class MENU extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,11 +40,21 @@ public class MENU extends AppCompatActivity {
             }
         });
 
+
+        Button eventbtn=findViewById(R.id.events);
+        eventbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), events.class);
+                startActivity(i);
+            }
+        });
+
         Button weatherbtn=findViewById(R.id.weather);
         weatherbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),weather.class);
+                Intent i = new Intent(getBaseContext(), MainActivity1.class);
                 startActivity(i);
             }
         });
@@ -54,5 +66,23 @@ public class MENU extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        Button newsbtn=findViewById(R.id.news);
+        newsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),newsclass.class);
+                startActivity(i);
+            }
+        });
+
+        Button govtbtn=findViewById(R.id.govtwall);
+        govtbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),govtwall.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

@@ -39,5 +39,21 @@ public class TRAVEL extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        Button cabbtn=findViewById(R.id.cab);
+        cabbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),cabs.class);
+                startActivity(i);
+            }
+        });
+        Button carbtn=findViewById(R.id.car);
+        carbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),carrental.class);
+                startActivity(i);
+            }
+        });
     }
 }

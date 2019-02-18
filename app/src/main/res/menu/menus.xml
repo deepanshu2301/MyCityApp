@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainActivity">
+
+    <item
+        android:title="Report a Problem"
+        android:icon="@drawable/error"
+
+
+        android:id="@+id/menproblem"
+
+        android:orderInCategory="4"/>
+    <item
+        android:title="Write to us"
+        android:id="@+id/menwrite"
+        android:icon="@drawable/pen"
+        android:orderInCategory="3"/>
+    <item
+        android:title="Rate us"
+        android:icon="@drawable/coins"
+        android:id="@+id/menrate"
+        android:orderInCategory="2"/>
+    <item
+        android:title="Go pro"
+        android:icon="@drawable/ratings"
+        android:id="@+id/menpro"
+        android:orderInCategory="5"/>
+    <item
+        android:title="Live Report!"
+        android:id="@+id/mennoti"
+        android:orderInCategory="6"/>
+    <item
+        android:title="About"
+        android:icon="@drawable/about"
+        android:id="@+id/menabout"
+        android:orderInCategory="7"/>
+
+
+</menu>

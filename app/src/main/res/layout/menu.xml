@@ -36,16 +36,44 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="events"
+        android:layout_gravity="center"
+        android:id="@+id/events"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="weather"
         android:layout_gravity="center"
         android:id="@+id/weather"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NewsWall"
+        android:layout_gravity="center"
+        android:id="@+id/news"/>
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chat-Support"
+        android:text="Govt-wall"
+        android:layout_gravity="center"
+        android:id="@+id/govtwall"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user wall"
         android:layout_gravity="end"
         android:id="@+id/chat"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chat support"
+        android:layout_gravity="end"
+        android:id="@+id/chatbot"/>
 
 </LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="4sp"
+    android:background="#3434"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="event name"
+        android:gravity="end"
+        android:id="@+id/etime"
+        android:textSize="15sp"/>
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="400sp"
+    android:scaleType="fitCenter"
+    android:id="@+id/imageview"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="event name"
+        android:id="@+id/etitle"
+        android:textColor="#000000"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="event description"
+        android:id="@+id/edesc"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"/>
+
+</LinearLayout>

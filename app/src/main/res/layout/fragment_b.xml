@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="@color/grey"
+        android:weightSum="6"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:text="City"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="Action"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:padding="3dp"
+        android:textColor="@color/black"
+        android:text="*long press to expand"/>
+    <ListView
+        android:layout_marginRight="4dp"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="4dp"
+        android:dividerHeight="2dp"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/savedlistviewaabb"/>
+
+</LinearLayout>

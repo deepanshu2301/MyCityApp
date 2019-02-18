@@ -26,8 +26,6 @@ public class weather extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weather);
-        Bundle bundle = getIntent().getExtras();
-        String cityname = bundle.getString("cityname");
     }
 
 }

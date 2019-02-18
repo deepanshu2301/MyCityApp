@@ -26,4 +26,18 @@
         android:layout_gravity="center"
         android:id="@+id/bus"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CABS"
+        android:layout_gravity="center"
+        android:id="@+id/cab"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rental cars"
+        android:layout_gravity="center"
+        android:id="@+id/car"/>
+
 </LinearLayout>
