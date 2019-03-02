@@ -7,21 +7,67 @@
     android:layout_height="match_parent"
     >
 
+<ImageView
+    android:layout_width="200sp"
+    android:layout_height="200sp"
+    android:layout_margin="50sp"
+    android:src="@drawable/iconim"/>
+
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200sp"
+        android:padding="5sp"
+        android:layout_margin="5sp"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:textAllCaps="false"
+        android:text="Sign in with Google"
+        android:textColor="@color/dgrey"
+        android:drawableLeft="@drawable/google"
+        android:background="@color/white"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_width="200sp"
+        android:padding="5sp"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/mail"
+        android:background="#CF011B"
+        android:textColor="@color/white"
+        android:text="  Sign in with email"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_width="200sp"
+        android:padding="5sp"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/phone"
+        android:background="#43C4A5"
+        android:textColor="@color/white"
+        android:text="  Sign in with phone"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_width="200sp"
+        android:padding="5sp"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:background="#4665A8"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/facebook"
+        android:text="  Sign in with Facebook"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_width="200sp"
+        android:padding="5sp"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:background="#F5B400"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/guest"
+        android:text="  Continue as a guest"
+        android:layout_gravity="center"/>
 
-        android:layout_gravity="center"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SIGN UP"
-        android:layout_gravity="center"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GUEST"
-        android:layout_gravity="center"/>
 </LinearLayout>

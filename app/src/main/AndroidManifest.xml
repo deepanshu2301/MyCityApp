@@ -66,6 +66,7 @@
         <activity android:name=".newsclass" />
         <activity android:name=".Weather_dir.DetailNewsClass" />
         <activity android:name=".govtwall" />
+        <activity android:name=".login" />
 
         <service android:name=".Weather_dir.MyServices" />
     </application>

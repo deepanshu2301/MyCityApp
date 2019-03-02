@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.dipanshu.mycityapp.Weather_dir.MainActivity1;
 
@@ -83,6 +84,15 @@ public class MENU extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),govtwall.class);
+                startActivity(i);
+            }
+        });
+
+        ImageButton loginbtn=findViewById(R.id.login);
+        loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),login.class);
                 startActivity(i);
             }
         });
