@@ -5,5 +5,13 @@
     <color name="colorAccent">#D81B60</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="grey">#000000</color>
+    <color name="grey">#FFFFFF</color>
+    <color name="yellow">#FFDE03</color>
+    <color name="lightblack">#212121</color>
+    <color name="cornflowerblue">#4799F7</color>
+    <color name="darkblue">#19647E</color>
+    <color name="lightblue">#D0E1D4</color>
+    <color name="mustard">#FFC857</color>
+    <color name="purple">#71697A</color>
+
 </resources>

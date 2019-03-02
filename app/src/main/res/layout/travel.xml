@@ -1,43 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/darkblue"
     android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FLIGHTS"
-        android:layout_gravity="center"
-        android:id="@+id/flights"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TRAINS"
-        android:layout_gravity="center"
-        android:id="@+id/trains"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BUS"
-        android:layout_gravity="center"
-        android:id="@+id/bus"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            android:background="@drawable/layout_bgone"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:scaleType="centerCrop"
+                android:padding="3sp"
+                android:src="@drawable/flights"
+                android:layout_height="200sp" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="4sp"
+                android:layout_marginRight="10sp"
+                android:background="@color/purple"
+                android:layout_height="wrap_content"
+                android:text="Wanna Fly ?"
+                android:layout_gravity="center"
+                android:id="@+id/flights"/>
+        </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CABS"
-        android:layout_gravity="center"
-        android:id="@+id/cab"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rental cars"
-        android:layout_gravity="center"
-        android:id="@+id/car"/>
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="10sp"
+                    android:background="@drawable/layout_bgone"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginTop="10sp"
+                        android:scaleType="centerCrop"
+                        android:padding="3sp"
+                        android:src="@drawable/bus"
+                        android:layout_height="200sp" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="4sp"
+                        android:layout_marginRight="10sp"
+                        android:background="@color/purple"
+                        android:layout_height="wrap_content"
+                        android:text="Or take a Bus?"
+                        android:layout_gravity="center"
+                        android:id="@+id/bus"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="10sp"
+                    android:background="@drawable/layout_bgone"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginTop="10sp"
+                        android:scaleType="centerCrop"
+                        android:padding="3sp"
+                        android:src="@drawable/cabs"
+                        android:layout_height="200sp" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="4sp"
+                        android:layout_marginRight="10sp"
+                        android:background="@color/purple"
+                        android:layout_height="wrap_content"
+                        android:text="or hire a taxi ?"
+                        android:layout_gravity="center"
+                        android:id="@+id/cab"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="10sp"
+                android:background="@drawable/layout_bgone"
+                android:layout_height="550sp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginTop="10sp"
+                    android:scaleType="centerCrop"
+                    android:padding="3sp"
+                    android:src="@drawable/trains"
+                    android:layout_height="480sp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginRight="10sp"
+                    android:background="@color/purple"
+                    android:layout_height="wrap_content"
+                    android:text="Trains journeys are awesome too.."
+                    android:layout_gravity="center"
+                    android:id="@+id/trains"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            android:background="@drawable/layout_bgone"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:scaleType="centerCrop"
+                android:padding="3sp"
+                android:src="@drawable/rental_cars"
+                android:layout_height="200sp" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="4sp"
+                android:layout_marginRight="10sp"
+                android:background="@color/purple"
+                android:layout_height="wrap_content"
+                android:text="Or drive yourself to the city"
+                android:layout_gravity="center"
+                android:id="@+id/car"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,79 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/lightblack"
     android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TRAVEL"
-        android:layout_gravity="center"
-        android:id="@+id/travel"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOTELS"
-        android:layout_gravity="center"
-        android:id="@+id/hotels"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Public services"
-        android:layout_gravity="center"
-        android:id="@+id/publicr"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="tourism"
-        android:layout_gravity="center"
-        android:id="@+id/tourism"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="events"
-        android:layout_gravity="center"
-        android:id="@+id/events"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="weather"
-        android:layout_gravity="center"
-        android:id="@+id/weather"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NewsWall"
-        android:layout_gravity="center"
-        android:id="@+id/news"/>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Govt-wall"
-        android:layout_gravity="center"
-        android:id="@+id/govtwall"/>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="user wall"
-        android:layout_gravity="end"
-        android:id="@+id/chat"/>
-
-    <Button
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/travel"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="TRAVEL"
+            android:layout_gravity="center"
+            android:id="@+id/travel"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/hotels"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="Hotels"
+            android:layout_gravity="center"
+            android:id="@+id/hotels"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/publiss"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="public services"
+            android:layout_gravity="center"
+            android:id="@+id/publicr"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/tourist"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="Tourism"
+            android:layout_gravity="center"
+            android:id="@+id/tourism"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/events"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="events"
+            android:layout_gravity="center"
+            android:id="@+id/events"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/weather"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="weather"
+            android:layout_gravity="center"
+            android:id="@+id/weather"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/wall"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="govt-wall"
+            android:layout_gravity="center"
+            android:id="@+id/govtwall"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/news"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="news"
+            android:layout_gravity="center"
+            android:id="@+id/news"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="center"
+            android:padding="3sp"
+            android:src="@drawable/write"
+            android:layout_height="200sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:text="user wall"
+            android:layout_gravity="center"
+            android:id="@+id/chat"/>
+    </LinearLayout>
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="chat support"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chaticon"
         android:layout_gravity="end"
         android:id="@+id/chatbot"/>
-
 </LinearLayout>
+</ScrollView>

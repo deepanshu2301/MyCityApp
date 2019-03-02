@@ -15,6 +15,7 @@ public class MMT extends AppCompatActivity {
         setContentView(R.layout.mmt);
         webView = (WebView)findViewById(R.id.mmt);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://www.makemytrip.com/");
+//        webView.loadUrl("https://www.makemytrip.com/");
+        webView.loadUrl("https://www.google.com/flights");
     }
 }
