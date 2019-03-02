@@ -37,7 +37,15 @@ public class MENU extends AppCompatActivity {
         publicbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),publicr.class);
+                Intent i = new Intent(getBaseContext(),MapsActivity.class);
+                startActivity(i);
+            }
+        });
+        Button forexbtn=findViewById(R.id.forex);
+        forexbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),ForexMainActivity.class);
                 startActivity(i);
             }
         });
