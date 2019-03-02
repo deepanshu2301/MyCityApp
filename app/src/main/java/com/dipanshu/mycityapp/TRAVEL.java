@@ -14,12 +14,17 @@ public class TRAVEL extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.travel);
 
+        Intent intent=getIntent();
+        final String city=intent.getStringExtra("City");
+        final String cityf=intent.getStringExtra("Cityf");
 
         Button flighttbtn=findViewById(R.id.flights);
         flighttbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(getBaseContext(),flights.class);
+                i.putExtra("City",city);
                 startActivity(i);
             }
         });
@@ -28,6 +33,8 @@ public class TRAVEL extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),IRCTC.class);
+                i.putExtra("Cityf",cityf);
+                i.putExtra("City",city);
                 startActivity(i);
             }
         });

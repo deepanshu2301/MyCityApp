@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         forwardbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),MENU.class);
+                Intent i = new Intent(getBaseContext(),fromtoact.class);
                 startActivity(i);
             }
         });

@@ -13,6 +13,27 @@ public class MyCityApp extends Application {
         super.onCreate();
     }
 
+    private String afrom;
+
+    public String getAto() {
+        return ato;
+    }
+
+    public void setAto(String ato) {
+        this.ato = ato;
+    }
+
+    private String ato;
+
+    public String getAfrom() {
+        return afrom;
+    }
+
+    public void setAfrom(String afrom) {
+        this.afrom = afrom;
+    }
+
+
     static NoteDatabase getNoteDatabase(Context context) {
         if (noteDatabase == null) {
             noteDatabase = Room.databaseBuilder(context,
