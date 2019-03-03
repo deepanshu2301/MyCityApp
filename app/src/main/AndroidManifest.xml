@@ -93,7 +93,6 @@
         <activity android:name=".EmergencyActivity" />
         <activity android:name=".mainpolution" />
         <activity android:name=".livemap" />
-        <activity android:name=".OcrCaptureActivity" />
 
         <service android:name=".Weather_dir.MyServices" />
         <service android:name=".ShakeService" />
