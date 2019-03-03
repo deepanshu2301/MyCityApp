@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -89,6 +93,7 @@
         <activity android:name=".EmergencyActivity" />
         <activity android:name=".mainpolution" />
         <activity android:name=".livemap" />
+        <activity android:name=".OcrCaptureActivity" />
 
         <service android:name=".Weather_dir.MyServices" />
         <service android:name=".ShakeService" />

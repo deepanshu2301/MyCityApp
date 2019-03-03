@@ -1,0 +1,4 @@
+#Sun Mar 03 16:46:20 IST 2019
+base.0=D\:\\ocr-reader-complete\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex
