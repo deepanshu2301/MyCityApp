@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.dipanshu.mycityapp.Weather_dir.MyCityApp;
 
@@ -21,8 +22,9 @@ public class fromtoact extends AppCompatActivity{
 
 
         Button btn=findViewById(R.id.fromtobtn);
-        Button expmore=findViewById(R.id.expmore);
-        Button livewall=findViewById(R.id.livewall);
+        TextView expmore=findViewById(R.id.explore);
+        TextView livewall=findViewById(R.id.announce);
+        TextView tools=findViewById(R.id.more);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +43,9 @@ public class fromtoact extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
+                        Intent i = new Intent(getBaseContext(), Explore.class);
+                        startActivity(i);
+
 
             }
         });
@@ -50,6 +55,14 @@ public class fromtoact extends AppCompatActivity{
                 Intent i=new Intent(fromtoact.this,ScrollingActivity.class);
                 startActivity(i);
 
+            }
+        });
+
+        tools.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(fromtoact.this,TOOLS.class);
+                startActivity(i);
 
             }
         });

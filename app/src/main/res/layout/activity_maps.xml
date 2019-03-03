@@ -1,0 +1,67 @@
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/TF_location"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Search Single Place/ Place-Type"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/B_search"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:onClick="onClick"
+        android:text="Search" />
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/B_search"/>
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:context="com.example.priyanka.mapsdemo.MapsActivity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/typeSpinner"
+        android:layout_above="@id/B_search"/>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5sp"
+        android:min="500"
+        android:max="20000"/>
+
+</LinearLayout>

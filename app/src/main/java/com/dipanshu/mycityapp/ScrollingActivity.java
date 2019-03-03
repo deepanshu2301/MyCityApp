@@ -34,6 +34,14 @@ public class ScrollingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button govtbtn=findViewById(R.id.govtwall);
+        govtbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),govtwall.class);
+                startActivity(i);
+            }
+        });
 
     }
 

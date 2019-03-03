@@ -33,65 +33,22 @@ public class MENU extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        Button publicbtn=findViewById(R.id.publicr);
-        publicbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),MapsActivity.class);
-                startActivity(i);
-            }
-        });
-        Button forexbtn=findViewById(R.id.forex);
-        forexbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),ForexMainActivity.class);
-                startActivity(i);
-            }
-        });
 
 
-        Button eventbtn=findViewById(R.id.events);
-        eventbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(), events.class);
-                startActivity(i);
-            }
-        });
-
-        Button weatherbtn=findViewById(R.id.weather);
-        weatherbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(), MainActivity1.class);
-                startActivity(i);
-            }
-        });
-
-        Button chatbtn=findViewById(R.id.chat);
-        chatbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),ScrollingActivity.class);
-                startActivity(i);
-            }
-        });
+//        Button chatbtn=findViewById(R.id.chat);
+//        chatbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getBaseContext(),ScrollingActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
         Button newsbtn=findViewById(R.id.news);
         newsbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),newsclass.class);
-                startActivity(i);
-            }
-        });
-
-        Button govtbtn=findViewById(R.id.govtwall);
-        govtbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),govtwall.class);
                 startActivity(i);
             }
         });

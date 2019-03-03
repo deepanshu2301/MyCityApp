@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/cornflowerblue"
     android:orientation="vertical"
-    android:background="@color/black"
-    android:gravity="center"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Explore">
 
 
     <LinearLayout
@@ -22,27 +22,20 @@
             android:layout_marginTop="10sp"
             android:scaleType="center"
             android:padding="3sp"
-            android:src="@drawable/write"
+            android:src="@drawable/events"
             android:layout_height="200sp" />
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_marginLeft="10sp"
             android:layout_marginTop="4sp"
             android:layout_marginRight="10sp"
+            android:background="@color/yellow"
             android:layout_height="wrap_content"
-            android:text="user-wall"
+            android:text="events"
             android:layout_gravity="center"
-            android:id="@+id/walldirect"/>
+            android:id="@+id/events"/>
     </LinearLayout>
 
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="write"
-        android:layout_margin="10sp"
-        android:id="@+id/writedirect" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -56,16 +49,17 @@
             android:layout_marginTop="10sp"
             android:scaleType="center"
             android:padding="3sp"
-            android:src="@drawable/wall"
+            android:src="@drawable/publiss"
             android:layout_height="200sp" />
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_marginLeft="10sp"
             android:layout_marginTop="4sp"
             android:layout_marginRight="10sp"
+            android:background="@color/yellow"
             android:layout_height="wrap_content"
-            android:text="govt-wall"
+            android:text="Nearby Places"
             android:layout_gravity="center"
-            android:id="@+id/govtwall"/>
+            android:id="@+id/publicr"/>
     </LinearLayout>
 </LinearLayout>

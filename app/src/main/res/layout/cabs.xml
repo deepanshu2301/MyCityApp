@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
     android:gravity="center"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OLA"
+    android:orientation="vertical">
+
+
+    <ImageButton
         android:id="@+id/ola"
-        android:gravity="center"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UBER"
+        android:layout_width="204dp"
+        android:layout_height="198dp"
+        android:background="@null"
+        android:gravity="center"
+
+        android:src="@drawable/olalogo"
+        android:text="ola" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <ImageButton
         android:id="@+id/uber"
-        android:gravity="center"/>
+        android:layout_width="176dp"
+
+        android:layout_height="175dp"
+        android:background="@null"
+        android:gravity="center"
+        android:src="@drawable/uberlogo" />
 </LinearLayout>

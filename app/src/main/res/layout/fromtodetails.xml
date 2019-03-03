@@ -1,91 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_marginTop="30sp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
+    android:layout_marginTop="30sp"
+    android:background="#F0F8FF"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="40sp"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/icontwo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#75AEC8"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginLeft="5sp"
+                android:padding="5sp"
+                android:text="TRAVELLING ?"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
 
         <TextView
             android:layout_width="wrap_content"
-            android:text="From :"
-            android:textSize="25sp"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:layout_width="250sp"
             android:layout_height="wrap_content"
-            android:id="@+id/frombtn"/>
+            android:text="From :"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+
+        <EditText
+            android:id="@+id/frombtn"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
         android:gravity="center"
-        android:layout_marginBottom="40sp"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:text="To :     "
-            android:textSize="25sp"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:layout_width="250sp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:id="@+id/tobtn"/>
+            android:text="To :     "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+
+        <EditText
+            android:id="@+id/tobtn"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
+            <Button
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:id="@+id/fromtobtn"/>
+                android:id="@+id/fromtobtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:text="Submit"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:padding="40dp"
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/expmore"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:text="Explore More"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="EXPLORE"
+                android:background="#2C9BC6"
+                android:id="@+id/explore"
+                android:textColor="@color/white"
+                android:layout_height="60sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:id="@+id/announce"
+                android:textSize="30sp"
+                android:background="#D4493A"
+                android:gravity="center"
+                android:text="ANNOUNCEMENTS"
+                android:textColor="@color/white"
+                android:layout_height="60sp" />
 
-    <TextView
+            <TextView
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:text="MORE"
+                android:background="#9D195B"
+                android:gravity="center"
+                android:id="@+id/more"
+                android:textSize="30sp"
+                android:layout_height="60sp" />
+            <TextView
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:text="LOGIN"
+                android:background="#6C6A5B"
+                android:gravity="center"
+                android:id="@+id/login"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:scaleType="fitCenter"
+                android:layout_height="60sp" />
+        </LinearLayout>
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="17dp"
-        android:text="Do you want something to tell people about your city
-"/>
-    <TextView
-        android:textSize="17dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You are a click away"/>
-
-    <Button
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/livewall"
-        android:text="->"
-        android:background="@null"/>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -21,7 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".fromtoact"></activity>
+        <activity android:name=".TOOLS"></activity>
+        <activity android:name=".Explore" />
+        <activity android:name=".fromtoact" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,6 +72,7 @@
         <activity android:name=".login" />
         <activity android:name=".MapsActivity" />
         <activity android:name=".ForexMainActivity" />
+        <activity android:name="com.example.myapplication.MapsActivity" />
 
         <service android:name=".Weather_dir.MyServices" />
     </application>

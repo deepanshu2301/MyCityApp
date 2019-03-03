@@ -11,6 +11,59 @@
         android:orientation="vertical"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            android:background="@drawable/layout_bgone"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="New Delhi"
+                    android:layout_weight="1"
+                    android:id="@+id/minifrom"
+                    android:padding="10sp"
+                    android:textSize="30sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12°C"
+                    android:id="@+id/minifromtemp"
+                    android:padding="10sp"
+                    android:textSize="30sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Banglore"
+                    android:layout_weight="1"
+                    android:id="@+id/minito"
+                    android:padding="10sp"
+                    android:textSize="30sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="16°C"
+                    android:layout_weight="1"
+                    android:id="@+id/minitotemp"
+                    android:padding="10sp"
+                    android:textSize="30sp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +87,7 @@
                 android:layout_marginRight="10sp"
                 android:background="@color/purple"
                 android:layout_height="wrap_content"
-                android:text="Wanna Fly ?"
+                android:text="Wanna Fly or book Hotels?"
                 android:layout_gravity="center"
                 android:id="@+id/flights"/>
         </LinearLayout>
@@ -131,7 +184,7 @@
                     android:layout_marginRight="10sp"
                     android:background="@color/purple"
                     android:layout_height="wrap_content"
-                    android:text="Trains journeys are awesome too.."
+                    android:text="Transit options !"
                     android:layout_gravity="center"
                     android:id="@+id/trains"/>
             </LinearLayout>
@@ -170,4 +223,5 @@
 
 
     </LinearLayout>
+
 </ScrollView>

@@ -2,37 +2,62 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="#dbf3fa"
     android:orientation="vertical"
     android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        />
+
+    <TextView
+
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANNOUNCEMENTS"
+        android:background="#0c339c"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#b7edf7"
+
         android:text="Any government announcements in the favour of people or any public updates (for new govt. services or any public related issue) will be posted here to inform large scale of people through Android application"
         android:layout_gravity="center"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:textColor="#340021"
         android:gravity="center"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/colorAccent"
-        />
+        android:layout_height="40dp">
+
+    </View>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="New common helpline number launched by govt. Now dial 102 for any help"
         android:layout_gravity="center"
+        android:background="@drawable/border"
         android:textSize="20sp"
         android:textColor="#000000"
         android:gravity="center"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/colorAccent"
+        android:layout_height="30dp"
+
         />
     <TextView
         android:layout_width="match_parent"
+        android:background="@drawable/border"
+
         android:layout_height="wrap_content"
         android:text="Delhi's wax museum will be open for general people from friday. You can buy tickets from this link-"
         android:layout_gravity="center"
@@ -41,21 +66,18 @@
         android:gravity="center"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/colorAccent"
+        android:layout_height="30dp"
+
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="A tribute to the brave soldiers who lost their lives in pulwama attack. May their soul rest in peace. JAI HIND ! (pakistan tere tukde honge...)"
+        android:background="@drawable/border"
+        android:text="A tribute to the brave soldiers who lost their lives in pulwama attack. May their soul rest in peace. JAI HIND !"
         android:layout_gravity="center"
         android:textSize="20sp"
         android:textColor="#000000"
         android:gravity="center"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/colorAccent"
-        />
+
 </LinearLayout>
