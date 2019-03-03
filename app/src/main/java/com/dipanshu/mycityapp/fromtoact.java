@@ -37,6 +37,9 @@ public class fromtoact extends AppCompatActivity{
                 intent.putExtra("City",to1);
                 intent.putExtra("Cityf",from1);
                 startActivity(intent);
+//                Intent intent1 = new Intent(getBaseContext(),Explore.class);
+//                intent1.putExtra("City",from1);
+//                startActivity(intent);
 
             }
         });

@@ -1,5 +1,6 @@
 <LinearLayout
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
@@ -35,11 +36,19 @@
         android:onClick="onClick"
         android:text="Search" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
     <Spinner
         android:id="@+id/typeSpinner"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_below="@+id/B_search"/>
+
+
+    </LinearLayout>
 
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,7 +57,7 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="400dp"
         tools:context="com.example.priyanka.mapsdemo.MapsActivity"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
@@ -63,5 +72,10 @@
         android:layout_marginTop="5sp"
         android:min="500"
         android:max="20000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:id="@+id/textview"
+        android:text="Proximity Radius(m)=500"/>
 
 </LinearLayout>

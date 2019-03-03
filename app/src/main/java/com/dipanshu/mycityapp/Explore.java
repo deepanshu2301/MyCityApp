@@ -27,6 +27,7 @@ public class Explore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(), events.class);
+
                 startActivity(i);
             }
         });

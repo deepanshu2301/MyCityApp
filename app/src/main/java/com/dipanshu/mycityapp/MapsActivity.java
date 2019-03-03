@@ -1,34 +1,38 @@
 package com.dipanshu.mycityapp;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dipanshu.mycityapp.GetNearbyPlacesData;
-import com.dipanshu.mycityapp.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -38,6 +42,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -52,6 +57,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker currentLocationmMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
     int PROXIMITY_RADIUS = 5000;
+    String SelectedQuery="singleplace";
     double latitude,longitude;
     private int supported_types;
 
@@ -73,10 +79,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        Spinner spinner = (Spinner)findViewById(R.id.typeSpinner);
-        ArrayAdapter<CharSequence> stateAdapter = ArrayAdapter.createFromResource(this,R.array.supported_types,android.R.layout.simple_selectable_list_item);
-        stateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(stateAdapter);
+
 
     }
 
@@ -151,23 +154,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.animateCamera(CameraUpdateFactory.zoomBy(15));
 
 
+
         if(client != null)
         {
             LocationServices.FusedLocationApi.removeLocationUpdates(client,this);
         }
-    }
 
 
-    public void onClick(View v)
-    {
-        Object dataTransfer[] = new Object[2];
-        GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-        EditText tf_location =  findViewById(R.id.TF_location);
         SeekBar seekBar= findViewById(R.id.seekbar);
+        final TextView textView=findViewById(R.id.textview);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 PROXIMITY_RADIUS=progress;
+                textView.setText("Proxity Radius(m)="+progress);
             }
 
             @Override
@@ -180,189 +180,56 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         });
+        Spinner spinner = (Spinner)findViewById(R.id.typeSpinner);
+        ArrayAdapter<CharSequence> stateAdapter = ArrayAdapter.createFromResource(this,R.array.supported_types,android.R.layout.simple_selectable_list_item);
+        stateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(stateAdapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0)
+                {
+
+                }
+                else{
+                    mMap.clear();
+                    Object dataTransfer[] = new Object[2];
+                    GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+
+                    String url = getUrl(latitude, longitude,parent.getItemAtPosition(position).toString());
+                    dataTransfer[0] = mMap;
+                    dataTransfer[1] = url;
+                    getNearbyPlacesData.execute(dataTransfer);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+
+    public void onClick(View v)
+    {
+        Object dataTransfer[] = new Object[2];
+        GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+        EditText tf_location =  findViewById(R.id.TF_location);
         switch(v.getId())
         {
             case R.id.B_search:
                 String location = tf_location.getText().toString();
                 List<Address> addressList;
-//                Toast.makeText(getBaseContext(),""+location,Toast.LENGTH_SHORT).show();
-                String location1=location;
-                location1.toLowerCase();
-                if(location1.equals("dustbin") ||location1.equals("dustbins")  ){
-                    ///////////
-//                    Toast.makeText(getBaseContext(),"dustbins..",Toast.LENGTH_SHORT).show();
-                    location="";
-                    LatLng dustbin1 = new LatLng(latitude+0.0005,longitude+0.0013);
-                    MarkerOptions dustbin1marker1 = new MarkerOptions();
-                    dustbin1marker1.position(dustbin1);
-                    dustbin1marker1.title("Dustbin1");
-                    dustbin1marker1.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker1);
-
-                    ///////////
-                    LatLng dustbin2 = new LatLng(latitude+0.0004,longitude+0.0019);
-                    MarkerOptions dustbin1marker2 = new MarkerOptions();
-                    dustbin1marker2.position(dustbin2);
-                    dustbin1marker2.title("Dustbin2");
-                    dustbin1marker2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker2);
-
-///////////
-                    LatLng dustbin3 = new LatLng(latitude+0.0009,longitude+0.0005);
-                    MarkerOptions dustbin1marker3 = new MarkerOptions();
-                    dustbin1marker3.position(dustbin3);
-                    dustbin1marker3.title("Dustbin3");
-                    dustbin1marker3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker3);
-
-///////////
-                    LatLng dustbin4 = new LatLng(latitude+0.0011,longitude+0.0003);
-                    MarkerOptions dustbin1marker4 = new MarkerOptions();
-                    dustbin1marker4.position(dustbin4);
-                    dustbin1marker4.title("Dustbin4");
-                    dustbin1marker4.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker4);
-
-///////////
-                    LatLng dustbin5 = new LatLng(latitude+0.0007,longitude+0.0007);
-                    MarkerOptions dustbin1marker5 = new MarkerOptions();
-                    dustbin1marker5.position(dustbin5);
-                    dustbin1marker5.title("Dustbin5");
-                    dustbin1marker5.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker5);
-
-///////////
-                    LatLng dustbin6 = new LatLng(latitude+0.0015,longitude+0.0012);
-                    MarkerOptions dustbin1marker6 = new MarkerOptions();
-                    dustbin1marker6.position(dustbin6);
-                    dustbin1marker6.title("Dustbin6");
-                    dustbin1marker6.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker6);
-
-///////////
-                    LatLng dustbin7 = new LatLng(latitude+0.0017,longitude+0.0009);
-                    MarkerOptions dustbin1marker7 = new MarkerOptions();
-                    dustbin1marker7.position(dustbin7);
-                    dustbin1marker7.title("Dustbin7");
-                    dustbin1marker7.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker7);
-
-///////////
-                    LatLng dustbin8 = new LatLng(latitude+0.0009,longitude+0.0006);
-                    MarkerOptions dustbin1marker8 = new MarkerOptions();
-                    dustbin1marker8.position(dustbin8);
-                    dustbin1marker8.title("Dustbin8");
-                    dustbin1marker8.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker8);
-
-///////////
-                    LatLng dustbin9 = new LatLng(latitude+0.0001,longitude+0.0018);
-                    MarkerOptions dustbin1marker9 = new MarkerOptions();
-                    dustbin1marker9.position(dustbin9);
-                    dustbin1marker9.title("Dustbin9");
-                    dustbin1marker9.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                    mMap.addMarker(dustbin1marker9);
-
-
-
-                }
-                String location2=location;
-                location2.toLowerCase();
-                if(location2.equals("wifi") ||location2.equals("wifis")  ){
-///////////
-                    LatLng dustbin1 = new LatLng(latitude+0.0008,longitude+0.0013);
-                    MarkerOptions dustbin1marker1 = new MarkerOptions();
-                    dustbin1marker1.position(dustbin1);
-                    dustbin1marker1.title("Wifi1");
-                    dustbin1marker1.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker1);
-
-                    ///////////
-                    LatLng dustbin2 = new LatLng(latitude+0.0014,longitude+0.0019);
-                    MarkerOptions dustbin1marker2 = new MarkerOptions();
-                    dustbin1marker2.position(dustbin2);
-                    dustbin1marker2.title("Wifi2");
-                    dustbin1marker2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker2);
-
-///////////
-                    LatLng dustbin3 = new LatLng(latitude+0.0019,longitude+0.0015);
-                    MarkerOptions dustbin1marker3 = new MarkerOptions();
-                    dustbin1marker3.position(dustbin3);
-                    dustbin1marker3.title("Wifi3");
-                    dustbin1marker3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker3);
-
-///////////
-                    LatLng dustbin4 = new LatLng(latitude+0.0005,longitude+0.0013);
-                    MarkerOptions dustbin1marker4 = new MarkerOptions();
-                    dustbin1marker4.position(dustbin4);
-                    dustbin1marker4.title("Wifi4");
-                    dustbin1marker4.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker4);
-
-///////////
-                    LatLng dustbin5 = new LatLng(latitude+0.0017,longitude+0.0003);
-                    MarkerOptions dustbin1marker5 = new MarkerOptions();
-                    dustbin1marker5.position(dustbin5);
-                    dustbin1marker5.title("Wifi5");
-                    dustbin1marker5.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker5);
-
-///////////
-                    LatLng dustbin6 = new LatLng(latitude+0.0003,longitude+0.0012);
-                    MarkerOptions dustbin1marker6 = new MarkerOptions();
-                    dustbin1marker6.position(dustbin6);
-                    dustbin1marker6.title("Wifi6");
-                    dustbin1marker6.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker6);
-
-///////////
-                    LatLng dustbin7 = new LatLng(latitude+0.0007,longitude+0.0009);
-                    MarkerOptions dustbin1marker7 = new MarkerOptions();
-                    dustbin1marker7.position(dustbin7);
-                    dustbin1marker7.title("Wifi7");
-                    dustbin1marker7.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker7);
-
-///////////
-                    LatLng dustbin8 = new LatLng(latitude+0.0015,longitude+0.0006);
-                    MarkerOptions dustbin1marker8 = new MarkerOptions();
-                    dustbin1marker8.position(dustbin8);
-                    dustbin1marker8.title("Wifi8");
-                    dustbin1marker8.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker8);
-
-///////////
-                    LatLng dustbin9 = new LatLng(latitude+0.0009,longitude+0.0018);
-                    MarkerOptions dustbin1marker9 = new MarkerOptions();
-                    dustbin1marker9.position(dustbin9);
-                    dustbin1marker9.title("Wifi9");
-                    dustbin1marker9.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-                    mMap.addMarker(dustbin1marker9);
-
-
-
-                }
-                else if(!location.equals(""))
+                if(!location.equals(""))
                 {
-                    String work="not done";
-                    Geocoder geocoder = new Geocoder(this);
-                    String supported_types[]= getResources().getStringArray(R.array.supported_types);
-                    for(int i=0;i<supported_types.length;i++){
-                        if(location.equals(supported_types[i])){
-                            mMap.clear();
-                            String url = getUrl(latitude, longitude, supported_types[i]);
-                            dataTransfer[0] = mMap;
-                            dataTransfer[1] = url;
-                            getNearbyPlacesData.execute(dataTransfer);
-                            Toast.makeText(MapsActivity.this, "Showing Nearby "+supported_types[i], Toast.LENGTH_SHORT).show();
-                            work="done";
-                            break;
-                        }
-                    }
-                    if(work.equals("not done"))
-                    {
+                    if(SelectedQuery.equals("singleplace")){
+                        mMap.clear();
+                        String url = getUrl1(latitude, longitude, location);
+                        dataTransfer[0] = mMap;
+                        dataTransfer[1] = url;
+                        getNearbyPlacesData.execute(dataTransfer);
+                        /*Geocoder geocoder = new Geocoder(this);
                         mMap.clear();
                         try {
                             addressList = geocoder.getFromLocationName(location, 25);
@@ -383,24 +250,98 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
+                        }*/
+                    }
+                    if(SelectedQuery.equals("placetype")){
+                        Geocoder geocoder = new Geocoder(this);
+                        String work="not done";
+                        String supported_types[]= getResources().getStringArray(R.array.supported_types);
+                        for(int i=0;i<supported_types.length;i++){
+                            if(location.equals(supported_types[i])){
+                                mMap.clear();
+                                String url = getUrl(latitude, longitude, supported_types[i]);
+                                dataTransfer[0] = mMap;
+                                dataTransfer[1] = url;
+                                getNearbyPlacesData.execute(dataTransfer);
+                                Toast.makeText(MapsActivity.this, "Showing Nearby "+supported_types[i], Toast.LENGTH_SHORT).show();
+                                work="done";
+                                break;
+                            }
+                        }
+                        if(work.equals("not done"))
+                        {
+                            mMap.clear();
+                            String url = getUrl1(latitude, longitude, location);
+                            dataTransfer[0] = mMap;
+                            dataTransfer[1] = url;
+                            getNearbyPlacesData.execute(dataTransfer);
+                          /*  mMap.clear();
+                            try {
+                                addressList = geocoder.getFromLocationName(location, 25);
+
+                                if(addressList != null)
+                                {
+                                    for(int i = 0;i<addressList.size();i++)
+                                    {
+                                        LatLng latLng = new LatLng(addressList.get(i).getLatitude() , addressList.get(i).getLongitude());
+                                        MarkerOptions markerOptions = new MarkerOptions();
+                                        markerOptions.position(latLng);
+                                        markerOptions.title(location);
+                                        mMap.addMarker(markerOptions);
+                                        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                                        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+
+                                    }
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }*/
                         }
                     }
                 }
-
                 break;
         }
     }
 
     private String getUrl(double latitude , double longitude , String nearbyPlace)
     {
-
+        nearbyPlace= nearbyPlace.replace(" ","+");
         StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlaceUrl.append("location="+latitude+","+longitude);
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
         googlePlaceUrl.append("&type="+nearbyPlace);
         googlePlaceUrl.append("&sensor=true");
-        googlePlaceUrl.append("&key="+"AIzaSyDdb9ZxodTnFy7MdLa8BUrXZVD8msLgoME");
+        googlePlaceUrl.append("&key="+"AIzaSyCJLAzFVkNk-9Z1kzjsbWoOtpWyByun0vA");
 
+        Log.d("MapsActivity", "url = "+googlePlaceUrl.toString());
+
+        return googlePlaceUrl.toString();
+    }
+    private String getUrl1(double latitude , double longitude , String nearbyPlace)
+    {
+      /*  Geocoder geocoder;
+        List<Address> addresses = null;
+        geocoder = new Geocoder(this, Locale.getDefault());
+
+        try {
+            addresses = geocoder.getFromLocation(latitude, longitude, 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+        String city = addresses.get(0).getLocality();
+        String state = addresses.get(0).getAdminArea();
+        String country = addresses.get(0).getCountryName();
+        String postalCode = addresses.get(0).getPostalCode();
+        String knownName = addresses.get(0).getFeatureName();*/
+        nearbyPlace= nearbyPlace.replace(" ","+");
+        String citynospace=getAddress(getApplicationContext(),latitude,longitude);
+        StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/textsearch/json?");
+        googlePlaceUrl.append("query="+nearbyPlace+"+in+"+citynospace);
+        googlePlaceUrl.append("&location="+latitude+","+longitude);
+        googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
+        googlePlaceUrl.append("&key="+"AIzaSyCJLAzFVkNk-9Z1kzjsbWoOtpWyByun0vA");
         Log.d("MapsActivity", "url = "+googlePlaceUrl.toString());
 
         return googlePlaceUrl.toString();
@@ -420,7 +361,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LocationServices.FusedLocationApi.requestLocationUpdates(client, locationRequest, this);
         }
     }
+    public static String getAddress(Context context, double LATITUDE, double LONGITUDE) {
 
+        //Set Address
+        String CITY="";
+        try {
+            Geocoder geocoder = new Geocoder(context, Locale.getDefault());
+            List<Address> addresses = geocoder.getFromLocation(LATITUDE, LONGITUDE, 1);
+            if (addresses != null && addresses.size() > 0) {
+
+
+
+                String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+                String city = addresses.get(0).getLocality();
+                String state = addresses.get(0).getAdminArea();
+                String country = addresses.get(0).getCountryName();
+                String postalCode = addresses.get(0).getPostalCode();
+                String knownName = addresses.get(0).getFeatureName();
+                CITY= city;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return CITY;
+    }
 
     public boolean checkLocationPermission()
     {

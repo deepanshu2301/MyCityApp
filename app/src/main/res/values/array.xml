@@ -36,5 +36,39 @@
         <item>ZAR</item>
 
     </string-array>
+    <string-array name="state">
+        <item>Select State</item>
+        <item>Andhra Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Delhi</item>
+    </string-array>
+
+    <string-array name="cityAP">
+        <item>Secretariat, Amaravati - APPCB</item>
+        <item>Anand Kala Kshetram, Rajamahendravaram - APPCB</item>
+        <item>Tirumala, Tirupati - APPCB</item>
+        <item>PWD Grounds, Vijayawada - APPCB</item>
+        <item>GVM Corporation, Visakhapatnam - APPCB</item>
+    </string-array>
+
+    <string-array name="cityA">
+        <item>Railway Colony, Guwahati - APCB</item>
+    </string-array>
+
+    <string-array name="cityB">
+        <item>Collectorate, Gaya - BSPCB</item>
+        <item>Muzaffarpur Collectorate, Muzaffarpur - BSPCB</item>
+        <item>IGSC Planetarium Complex, Patna - BSPCB</item>
+    </string-array>
+
+    <string-array name="cityD"><item>Alipur, Delhi - DPCC</item>
+        <item>Anand Vihar, Delhi - DPCC</item>
+        <item>Ashok Vihar, Delhi - DPCC</item>
+        <item>Bawana, Delhi - DPCC</item>
+        <item>DTU, Delhi - CPCB</item>
+        <item>Dr. Karni Singh Shooting Range, Delhi - DPCC</item>
+        <item>Dwarka-Sector 8, Delhi - DPCC</item>
+    </string-array>
 
 </resources>

@@ -38,14 +38,22 @@ import okhttp3.Response;
 
 public class events extends AppCompatActivity {
     String city="delhi";
+    String city1="";
     Context ctx=getBaseContext();
+
+
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.events);
+      //  String city1="delhi";
+
         Button enterbtn=findViewById(R.id.cityenter);
         enterbtn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 EditText editText = findViewById(R.id.eventcity);

@@ -61,5 +61,14 @@ public class TOOLS extends AppCompatActivity {
             }
         });
 
+        Button pollution=findViewById(R.id.pollution);
+        pollution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), mainpolution.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

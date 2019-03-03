@@ -3,24 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:gravity="center"
+    android:background="@color/cornflowerblue"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:orientation="vertical"
         android:layout_margin="10sp"
         android:background="@drawable/layout_bgone"
-        android:layout_height="550sp">
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
             android:layout_marginTop="10sp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:padding="3sp"
-            android:src="@drawable/trains"
-            android:layout_height="480sp" />
+            android:src="@drawable/cabs"
+            android:layout_height="wrap_content" />
         <Button
             android:layout_width="match_parent"
             android:layout_marginLeft="10sp"
@@ -28,25 +29,26 @@
             android:layout_marginRight="10sp"
             android:background="@color/purple"
             android:layout_height="wrap_content"
-            android:text="Transit options !"
+            android:text="ZOOM CAR"
             android:layout_gravity="center"
             android:id="@+id/zoombutton"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:orientation="vertical"
         android:layout_margin="10sp"
         android:background="@drawable/layout_bgone"
-        android:layout_height="550sp">
+        android:layout_height="wrap_content">
+
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="286dp"
+            android:layout_height="211dp"
             android:layout_marginLeft="10sp"
-            android:layout_marginRight="10sp"
             android:layout_marginTop="10sp"
-            android:scaleType="centerCrop"
+            android:layout_marginRight="10sp"
             android:padding="3sp"
-            android:src="@drawable/trains"
-            android:layout_height="480sp" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/rental_cars" />
         <Button
             android:layout_width="match_parent"
             android:layout_marginLeft="10sp"
@@ -54,7 +56,7 @@
             android:layout_marginRight="10sp"
             android:background="@color/purple"
             android:layout_height="wrap_content"
-            android:text="Transit options !"
+            android:text="Avis Cars"
             android:layout_gravity="center"
             android:id="@+id/avisbutton"/>
     </LinearLayout>
