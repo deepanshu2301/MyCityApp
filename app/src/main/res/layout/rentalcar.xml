@@ -6,19 +6,59 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ZOOMCAR"
-        android:gravity="center"
-        android:id="@+id/zoombutton"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bgone"
+        android:layout_height="550sp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="centerCrop"
+            android:padding="3sp"
+            android:src="@drawable/trains"
+            android:layout_height="480sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/purple"
+            android:layout_height="wrap_content"
+            android:text="Transit options !"
+            android:layout_gravity="center"
+            android:id="@+id/zoombutton"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:background="@drawable/layout_bgone"
+        android:layout_height="550sp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:scaleType="centerCrop"
+            android:padding="3sp"
+            android:src="@drawable/trains"
+            android:layout_height="480sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginRight="10sp"
+            android:background="@color/purple"
+            android:layout_height="wrap_content"
+            android:text="Transit options !"
+            android:layout_gravity="center"
+            android:id="@+id/avisbutton"/>
+    </LinearLayout>
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AVIS-CAR"
-        android:gravity="center"
-        android:id="@+id/avisbutton"/>
 
 </LinearLayout>

@@ -36,6 +36,8 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:layout_marginBottom="10sp"
         android:orientation="horizontal">
 
@@ -43,14 +45,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="        From      :"
+            android:text="From:"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
 
         <EditText
             android:id="@+id/frombtn"
-            android:focusable="false"
             android:layout_width="215sp"
             android:layout_height="wrap_content" />
 
@@ -59,21 +60,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:layout_marginBottom="10sp"
         android:orientation="horizontal">
 
 
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="67dp"
             android:layout_height="wrap_content"
-            android:text="        To          :"
+            android:text="To:"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
 
         <EditText
             android:id="@+id/tobtn"
-            android:focusable="false"
             android:layout_width="215sp"
             android:layout_height="wrap_content" />
 

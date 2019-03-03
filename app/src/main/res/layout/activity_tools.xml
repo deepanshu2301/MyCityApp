@@ -110,7 +110,7 @@
             android:layout_marginRight="10sp"
             android:background="@color/yellow"
             android:layout_height="wrap_content"
-            android:text="Accident News Caster"
+            android:text="Accident Detector"
             android:layout_gravity="center"
             android:id="@+id/shakebtnloc"/>
     </LinearLayout>

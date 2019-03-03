@@ -15,6 +15,8 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         colorAnim.setRepeatMode(ValueAnimator.REVERSE);
         colorAnim.start();
         
-        Button forwardbtn=findViewById(R.id.forward);
+        ImageView forwardbtn=findViewById(R.id.forward);
         forwardbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,3 +51,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+

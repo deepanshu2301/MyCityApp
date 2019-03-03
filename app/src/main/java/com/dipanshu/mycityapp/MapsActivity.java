@@ -185,7 +185,166 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             case R.id.B_search:
                 String location = tf_location.getText().toString();
                 List<Address> addressList;
-                if(!location.equals(""))
+//                Toast.makeText(getBaseContext(),""+location,Toast.LENGTH_SHORT).show();
+                String location1=location;
+                location1.toLowerCase();
+                if(location1.equals("dustbin") ||location1.equals("dustbins")  ){
+                    ///////////
+//                    Toast.makeText(getBaseContext(),"dustbins..",Toast.LENGTH_SHORT).show();
+                    location="";
+                    LatLng dustbin1 = new LatLng(latitude+0.0005,longitude+0.0013);
+                    MarkerOptions dustbin1marker1 = new MarkerOptions();
+                    dustbin1marker1.position(dustbin1);
+                    dustbin1marker1.title("Dustbin1");
+                    dustbin1marker1.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker1);
+
+                    ///////////
+                    LatLng dustbin2 = new LatLng(latitude+0.0004,longitude+0.0019);
+                    MarkerOptions dustbin1marker2 = new MarkerOptions();
+                    dustbin1marker2.position(dustbin2);
+                    dustbin1marker2.title("Dustbin2");
+                    dustbin1marker2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker2);
+
+///////////
+                    LatLng dustbin3 = new LatLng(latitude+0.0009,longitude+0.0005);
+                    MarkerOptions dustbin1marker3 = new MarkerOptions();
+                    dustbin1marker3.position(dustbin3);
+                    dustbin1marker3.title("Dustbin3");
+                    dustbin1marker3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker3);
+
+///////////
+                    LatLng dustbin4 = new LatLng(latitude+0.0011,longitude+0.0003);
+                    MarkerOptions dustbin1marker4 = new MarkerOptions();
+                    dustbin1marker4.position(dustbin4);
+                    dustbin1marker4.title("Dustbin4");
+                    dustbin1marker4.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker4);
+
+///////////
+                    LatLng dustbin5 = new LatLng(latitude+0.0007,longitude+0.0007);
+                    MarkerOptions dustbin1marker5 = new MarkerOptions();
+                    dustbin1marker5.position(dustbin5);
+                    dustbin1marker5.title("Dustbin5");
+                    dustbin1marker5.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker5);
+
+///////////
+                    LatLng dustbin6 = new LatLng(latitude+0.0015,longitude+0.0012);
+                    MarkerOptions dustbin1marker6 = new MarkerOptions();
+                    dustbin1marker6.position(dustbin6);
+                    dustbin1marker6.title("Dustbin6");
+                    dustbin1marker6.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker6);
+
+///////////
+                    LatLng dustbin7 = new LatLng(latitude+0.0017,longitude+0.0009);
+                    MarkerOptions dustbin1marker7 = new MarkerOptions();
+                    dustbin1marker7.position(dustbin7);
+                    dustbin1marker7.title("Dustbin7");
+                    dustbin1marker7.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker7);
+
+///////////
+                    LatLng dustbin8 = new LatLng(latitude+0.0009,longitude+0.0006);
+                    MarkerOptions dustbin1marker8 = new MarkerOptions();
+                    dustbin1marker8.position(dustbin8);
+                    dustbin1marker8.title("Dustbin8");
+                    dustbin1marker8.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker8);
+
+///////////
+                    LatLng dustbin9 = new LatLng(latitude+0.0001,longitude+0.0018);
+                    MarkerOptions dustbin1marker9 = new MarkerOptions();
+                    dustbin1marker9.position(dustbin9);
+                    dustbin1marker9.title("Dustbin9");
+                    dustbin1marker9.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    mMap.addMarker(dustbin1marker9);
+
+
+
+                }
+                String location2=location;
+                location2.toLowerCase();
+                if(location2.equals("wifi") ||location2.equals("wifis")  ){
+///////////
+                    LatLng dustbin1 = new LatLng(latitude+0.0008,longitude+0.0013);
+                    MarkerOptions dustbin1marker1 = new MarkerOptions();
+                    dustbin1marker1.position(dustbin1);
+                    dustbin1marker1.title("Wifi1");
+                    dustbin1marker1.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker1);
+
+                    ///////////
+                    LatLng dustbin2 = new LatLng(latitude+0.0014,longitude+0.0019);
+                    MarkerOptions dustbin1marker2 = new MarkerOptions();
+                    dustbin1marker2.position(dustbin2);
+                    dustbin1marker2.title("Wifi2");
+                    dustbin1marker2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker2);
+
+///////////
+                    LatLng dustbin3 = new LatLng(latitude+0.0019,longitude+0.0015);
+                    MarkerOptions dustbin1marker3 = new MarkerOptions();
+                    dustbin1marker3.position(dustbin3);
+                    dustbin1marker3.title("Wifi3");
+                    dustbin1marker3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker3);
+
+///////////
+                    LatLng dustbin4 = new LatLng(latitude+0.0005,longitude+0.0013);
+                    MarkerOptions dustbin1marker4 = new MarkerOptions();
+                    dustbin1marker4.position(dustbin4);
+                    dustbin1marker4.title("Wifi4");
+                    dustbin1marker4.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker4);
+
+///////////
+                    LatLng dustbin5 = new LatLng(latitude+0.0017,longitude+0.0003);
+                    MarkerOptions dustbin1marker5 = new MarkerOptions();
+                    dustbin1marker5.position(dustbin5);
+                    dustbin1marker5.title("Wifi5");
+                    dustbin1marker5.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker5);
+
+///////////
+                    LatLng dustbin6 = new LatLng(latitude+0.0003,longitude+0.0012);
+                    MarkerOptions dustbin1marker6 = new MarkerOptions();
+                    dustbin1marker6.position(dustbin6);
+                    dustbin1marker6.title("Wifi6");
+                    dustbin1marker6.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker6);
+
+///////////
+                    LatLng dustbin7 = new LatLng(latitude+0.0007,longitude+0.0009);
+                    MarkerOptions dustbin1marker7 = new MarkerOptions();
+                    dustbin1marker7.position(dustbin7);
+                    dustbin1marker7.title("Wifi7");
+                    dustbin1marker7.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker7);
+
+///////////
+                    LatLng dustbin8 = new LatLng(latitude+0.0015,longitude+0.0006);
+                    MarkerOptions dustbin1marker8 = new MarkerOptions();
+                    dustbin1marker8.position(dustbin8);
+                    dustbin1marker8.title("Wifi8");
+                    dustbin1marker8.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker8);
+
+///////////
+                    LatLng dustbin9 = new LatLng(latitude+0.0009,longitude+0.0018);
+                    MarkerOptions dustbin1marker9 = new MarkerOptions();
+                    dustbin1marker9.position(dustbin9);
+                    dustbin1marker9.title("Wifi9");
+                    dustbin1marker9.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+                    mMap.addMarker(dustbin1marker9);
+
+
+
+                }
+                else if(!location.equals(""))
                 {
                     String work="not done";
                     Geocoder geocoder = new Geocoder(this);
