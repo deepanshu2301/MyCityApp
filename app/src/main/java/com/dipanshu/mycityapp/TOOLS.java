@@ -43,5 +43,23 @@ public class TOOLS extends AppCompatActivity {
             }
         });
 
+        Button accidentbtn=findViewById(R.id.shakebtnloc);
+        accidentbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), ShakeMainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button emergency=findViewById(R.id.emergencyno);
+        emergency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), EmergencyActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

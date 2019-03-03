@@ -33,6 +33,7 @@ public class ForexMainActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                resultValue= Double.valueOf(resultValue.intValue());
                 text.setText(resultValue.toString());
             }
         });

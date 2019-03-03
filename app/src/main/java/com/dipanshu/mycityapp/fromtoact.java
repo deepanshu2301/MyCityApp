@@ -25,6 +25,7 @@ public class fromtoact extends AppCompatActivity{
         TextView expmore=findViewById(R.id.explore);
         TextView livewall=findViewById(R.id.announce);
         TextView tools=findViewById(R.id.more);
+        TextView login =findViewById(R.id.login);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +67,14 @@ public class fromtoact extends AppCompatActivity{
 
             }
         });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(fromtoact.this,login.class);
+                startActivity(i);
 
+            }
+        });
 
     }
 }

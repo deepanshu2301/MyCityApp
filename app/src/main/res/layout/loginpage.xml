@@ -58,6 +58,18 @@
         android:drawableLeft="@drawable/facebook"
         android:text="  Sign in with Facebook"
         android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="200sp"
+        android:padding="5sp"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Sign in with Aadhar"
+        android:textColor="@color/dgrey"
+        android:drawableLeft="@drawable/aadhar"
+        android:background="@color/white"
+        android:layout_gravity="center"/>
     <Button
         android:layout_width="200sp"
         android:padding="5sp"

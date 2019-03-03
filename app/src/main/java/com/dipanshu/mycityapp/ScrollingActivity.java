@@ -25,15 +25,6 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
 
-
-        Button fab1 = findViewById(R.id.writedirect);
-        fab1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(),WritingActivity.class);
-                startActivity(intent);
-            }
-        });
         Button govtbtn=findViewById(R.id.govtwall);
         govtbtn.setOnClickListener(new View.OnClickListener() {
             @Override
